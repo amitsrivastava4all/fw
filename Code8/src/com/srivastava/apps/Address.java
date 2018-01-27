@@ -1,0 +1,62 @@
+package com.srivastava.apps;
+
+import java.io.Serializable;
+
+import javax.persistence.Embeddable;
+
+@Embeddable
+public class Address implements Serializable{
+
+	
+private String city;
+private String pincode;
+private String state;
+public Address(){}
+
+@Override
+public int hashCode(){
+	return city.length();
+}
+@Override
+public boolean equals(Object object){
+	if(object instanceof Address){
+		Address address = (Address) object;
+		if(address.state.equals(this.state) 
+				&& address.city.equals(this.city) && address.pincode.equals(this.pincode)){
+			return true;
+		}
+			
+	}
+	return false;
+}
+
+public Address(String city, String pincode, String state) {
+	super();
+	this.city = city;
+	this.pincode = pincode;
+	this.state = state;
+}
+public String getCity() {
+	return city;
+}
+public void setCity(String city) {
+	this.city = city;
+}
+public String getPincode() {
+	return pincode;
+}
+public void setPincode(String pincode) {
+	this.pincode = pincode;
+}
+public String getState() {
+	return state;
+}
+public void setState(String state) {
+	this.state = state;
+}
+@Override
+public String toString() {
+	return "Address [city=" + city + ", pincode=" + pincode + ", state=" + state + "]";
+}
+
+}
