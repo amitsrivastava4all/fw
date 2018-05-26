@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: amit
+Build-Jdk: 9.0.1
+Implementation-Title: first app demo
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.bmpl.apps
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/myapp
+Created-By: Maven Integration for Eclipse
+
